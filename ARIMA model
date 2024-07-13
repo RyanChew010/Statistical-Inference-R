@@ -17,7 +17,7 @@ train.data<- window(nvda, end=c(120,20))
 test.data<- window(nvda, start=c(120,21))
 
 #Exponential Smoothing
-brown<- ses(train.data, h=200) #h is number of periods for forecasting
+brown<- ses(train.data, h=200)
 brown.data<- as.data.frame(brown)
 plot(brown, main="Brown Exponential Smoothing", 
      ylab="Price", xlab="month",
